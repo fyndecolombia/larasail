@@ -24,7 +24,7 @@
 # Initial server setup
 # Once you install LaraSail, in order to do all of the initial server set up you need to run the following command:
 
-# larasail setup
+#···· larasail setup
 # You can make sure it’s installed by running:
 
 # larasail -h
@@ -91,4 +91,4 @@ barNoColor
 rm -rf larasail-master
 su - larasail
 
-. /etc/.larasail/deploy_proyect
+

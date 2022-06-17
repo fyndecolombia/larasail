@@ -187,7 +187,7 @@ if [ $INSTALL_REDIS -eq 1 ] ; then
 fi
 
 setsail
-
+. /etc/.larasail/deploy_proyect
 bar
 cyan "| Happy Sailing! "
 bar
