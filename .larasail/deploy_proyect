@@ -15,12 +15,17 @@
 # /var/www/mywebsite/public folder
 #
 #/
+echo "what is your name?"
+read name
+echo "$name"
 if [ -z $1 ]; then
     echo "Usage: larasail wave <project-path>"
     echo ""
     echo "${Cyan}Tip: The project-path must be empty"
     exit
 fi
+
+
 
 PROJECT_PATH=$1
 
