@@ -4,7 +4,7 @@
 
 # ejecutador
 
-# curl -sL https://github.com/fyndecolombia/larasail/archive/master.tar.gz | tar xz && source larasail-master/install && cd /var/www && curl -sL https://github.com/fyndecolombia/IngeBackend/archive/master.tar.gz | tar xz IngeBackend
+# curl -sL https://github.com/fyndecolombia/larasail/archive/master.tar.gz | tar xz && source larasail-master/install && larasail setup && cd /var/www && curl -sL https://github.com/fyndecolombia/IngeBackend/archive/master.tar.gz | tar xz IngeBackend
 
 
 
