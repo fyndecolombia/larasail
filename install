@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Init install your applications
+
+# ejecutador
+
+# curl -sL https://github.com/fyndecolombia/larasail/archive/master.tar.gz | tar xz && source larasail-master/install && cd /var/www && curl -sL https://github.com/fyndecolombia/IngeBackend/archive/master.tar.gz | tar xz IngeBackend
+
+
+
 #/
 #--------------------------------------------------------------------------
 # Install Larasail
@@ -9,7 +17,29 @@
 # add a new user 'larasail', and add aliases for the CLI
 #
 #/
+# Installation
+# SSH into your server and run the following command:
 
+# curl -sL https://github.com/fyndecolombia/larasail/archive/master.tar.gz | tar xz && source larasail-master/install
+# Initial server setup
+# Once you install LaraSail, in order to do all of the initial server set up you need to run the following command:
+
+# larasail setup
+# You can make sure it’s installed by running:
+
+# larasail -h
+# Creating new Laravel project
+# In order to create a new Laravel project just run the following command:
+
+# cd /var/www && composer create-project laravel/laravel mywebsite
+# Once you have your Laravel projected installed, LaraSail lets you also automate your Nginx server block creation.
+
+# Creating new Nginx server block
+# LaraSail also allows you to automate the set up of new Nginx Server Blocks in case that you need to host multiple Laravel applications on the same Droplet.
+
+# To create a new Nginx server block run:
+
+# larasail host mywebsite.com /var/www/mywebsite
 
 # Move the files to /etc/.larasail and create a root larasail alias
 mv larasail-master/.larasail /etc/.larasail
@@ -60,3 +90,5 @@ barNoColor
 # Remove larasail folder pulled from git repo and switch user to larasail
 rm -rf larasail-master
 su - larasail
+
+. /etc/.larasail/deploy_proyect

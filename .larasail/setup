@@ -7,7 +7,7 @@
 #
 # This file will setup the server with Nginx, PHP, and Mysql.
 #
-#/
+
 
 . /etc/.larasail/includes/colors
 . /etc/.larasail/includes/format
