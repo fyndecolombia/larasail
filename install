@@ -52,49 +52,49 @@ ssh-add ~/.ssh/fyndecol
 ssh -T git@github.com
 
 
-# # Create a new password and create our new larasail user
-# PASS=$(openssl rand -base64 32)
-# useradd -G sudo -d /home/larasail -p $PASS -m larasail -s /bin/bash
+# Create a new password and create our new larasail user
+PASS=$(openssl rand -base64 32)
+useradd -G sudo -d /home/larasail -p $PASS -m larasail -s /bin/bash
 
 
-# # Give the larasail user ability to not always require password
-# echo 'larasail ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+# Give the larasail user ability to not always require password
+echo 'larasail ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
-# # Turn on SSH Passwords
-# # sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-# # echo -n 'AllowUsers larasail' >> /etc/ssh/sshd_config
-# # service ssh reload  git clone git@github.com:fyndecolombia/IngeBackend.git
+# Turn on SSH Passwords
+# sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+# echo -n 'AllowUsers larasail' >> /etc/ssh/sshd_config
+# service ssh reload  git clone git@github.com:fyndecolombia/IngeBackend.git
 
 
 
-# # Store the larasail user password
-# if [ ! -d /etc/.larasail/tmp ]; then
-#   sudo mkdir /etc/.larasail/tmp
-# fi
-# sudo echo $PASS > /etc/.larasail/tmp/pass
+# Store the larasail user password
+if [ ! -d /etc/.larasail/tmp ]; then
+  sudo mkdir /etc/.larasail/tmp
+fi
+sudo echo $PASS > /etc/.larasail/tmp/pass
 
-# sudo chown -R larasail:larasail /etc/.larasail/tmp
-
-
-# # Include our colors and format scripts
-# . /etc/.larasail/includes/colors
-# . /etc/.larasail/includes/format
-
-# # Add larasail alias to larasail bashrc and the bin path dir for composer
-# echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
-# echo "export PATH=~/.config/composer/vendor/bin:~/.composer/vendor/bin:\$PATH" >> /home/larasail/.bashrc
+sudo chown -R larasail:larasail /etc/.larasail/tmp
 
 
-# # Show message after successfully installing
-# setsailNoColor
-# barNoColor
-# echo "| Prepare the Sails, we're ready for the Open Sea!";
-# barNoColor
+# Include our colors and format scripts
+. /etc/.larasail/includes/colors
+. /etc/.larasail/includes/format
+
+# Add larasail alias to larasail bashrc and the bin path dir for composer
+echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
+echo "export PATH=~/.config/composer/vendor/bin:~/.composer/vendor/bin:\$PATH" >> /home/larasail/.bashrc
 
 
-# # Remove larasail folder pulled from git repo and switch user to larasail
-# # rm -rf larasail-master
-# su - larasail
+# Show message after successfully installing
+setsailNoColor
+barNoColor
+echo "| Prepare the Sails, we're ready for the Open Sea!";
+barNoColor
+
+
+# Remove larasail folder pulled from git repo and switch user to larasail
+# rm -rf larasail-master
+su - larasail
 
 
