@@ -17,11 +17,11 @@
 #/
 serverRoot='/var/www/'
 
-cp -a /root/.ssh/fyndecol ~/.ssh/
-chmod 600 ~/.ssh/fyndecol
+sudo cp /root/.ssh/fyndecol ~/.ssh/
+sudo chmod 600 ~/.ssh/fyndecol
 eval "$(ssh-agent -s)"
 # sudo ssh-add ~/.ssh/fyndecol
-ssh-agent sh -c 'ssh-add ~/.ssh/fyndecol'
+sudo ssh-agent sh -c 'ssh-add ~/.ssh/fyndecol'
 ssh -T git@github.com
 
 echo "Url del repositorio a clonar de laravel?"
@@ -47,3 +47,4 @@ php artisan key:generate
 # php artisan migrate
 
 # php artisan db:seed
+
