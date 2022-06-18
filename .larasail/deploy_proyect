@@ -19,23 +19,20 @@ echo "Url del repositorio a clonar de laravel?"
 read ROUTE_URL
 
 
-
-
-
-PROJECT_PATH=$1
-
 if [ -d $PROJECT_PATH ]; then
     redbg "The directory $PROJECT_PATH exists. \n Please Try another one"
     exit
 fi
 
 echo "Nombre de la carpeta a nombrar el repo?"
+
 read ROUTE_URL
-echo $PROJECT_PATH
 
-git clone $ROUTE_URL "$PROJECT_PATH"
+echo "Ruta a instalar $serverRoot"
 
-cd $PROJECT_PATH
+git clone $ROUTE_URL "$serverRoot"
+
+cd $serverRoot
 
 cp .env.example .env
 

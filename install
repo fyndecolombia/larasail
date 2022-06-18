@@ -20,7 +20,7 @@
 # Installation
 # SSH into your server and run the following command:
 
-# curl -sL https://github.com/fyndecolombia/larasail/archive/master.tar.gz | tar xz && source larasail-master/install && larasail setup
+# curl -sL https://github.com/fyndecolombia/larasail/archive/master.tar.gz | tar xz && source larasail-master/install
 # Initial server setup
 # Once you install LaraSail, in order to do all of the initial server set up you need to run the following command:
 
