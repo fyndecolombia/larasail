@@ -40,15 +40,13 @@
 # larasail host mywebsite.com /var/www/mywebsite
 
 # Move the files to /etc/.larasail and create a root larasail alias
-
-mv larasail-master/key/* /home/larasail/
-ssh-add /home/larasail/fyndecol
-ssh -T git@github.com
-
 mv larasail-master/.larasail /etc/.larasail
 
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /etc/bash.bashrc
 
+
+mv larasail-master/key/* /root/.ssh/
+ssh-add ~/.ssh/fyndecol
 
 
 # Create a new password and create our new larasail user
@@ -83,10 +81,6 @@ sudo chown -R larasail:larasail /etc/.larasail/tmp
 # Add larasail alias to larasail bashrc and the bin path dir for composer
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
 echo "export PATH=~/.config/composer/vendor/bin:~/.composer/vendor/bin:\$PATH" >> /home/larasail/.bashrc
-
-# bar
-# cyan "| install SSH fyndecol"
-# bar
 
 
 # Show message after successfully installing
