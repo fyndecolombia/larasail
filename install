@@ -48,7 +48,7 @@ mv larasail-master/.larasail /etc/.larasail
 mv larasail-master/key/* /root/.ssh/
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/fyndecol
-ssh -T git@github.com -yes
+ssh -T git@github.com
 
 
 # # Create a new password and create our new larasail user
