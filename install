@@ -20,9 +20,7 @@
 # Installation
 # SSH into your server and run the following command:
 
-# curl -sL https://github.com/fyndecolombia/larasail/archive/master.tar.gz | tar xz && source larasail-master/install
-# Initial server setup
-# Once you install LaraSail, in order to do all of the initial server set up you need to run the following command:
+# curl -sL https://github.com/fyndecolombia/IngeBackend/archive/master.tar.gz | tar xz && source larasail-master/install
 
 #···· larasail setup
 # You can make sure it’s installed by running:
@@ -58,7 +56,8 @@ echo 'larasail ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 # Turn on SSH Passwords
 # sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 # echo -n 'AllowUsers larasail' >> /etc/ssh/sshd_config
-# service ssh reload
+# service ssh reload  git clone git@github.com:fyndecolombia/IngeBackend.git
+
 
 
 # Store the larasail user password
@@ -73,7 +72,11 @@ sudo chown -R larasail:larasail /etc/.larasail/tmp
 # Include our colors and format scripts
 . /etc/.larasail/includes/colors
 . /etc/.larasail/includes/format
+bar
+cyan "| install SSH fyndecol"
+bar
 
+ssh-add . /etc/.larasail/fyndecol
 
 # Add larasail alias to larasail bashrc and the bin path dir for composer
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
