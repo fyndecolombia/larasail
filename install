@@ -44,11 +44,7 @@ mv larasail-master/.larasail /etc/.larasail
 
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /etc/bash.bashrc
 
-bar
-cyan "| install SSH fyndecol"
-bar
-mv larasail-master/fyndecol /root/.ssh/
-ssh-add /root/.ssh/fyndecol
+
 
 # Create a new password and create our new larasail user
 PASS=$(openssl rand -base64 32)
@@ -83,6 +79,11 @@ sudo chown -R larasail:larasail /etc/.larasail/tmp
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
 echo "export PATH=~/.config/composer/vendor/bin:~/.composer/vendor/bin:\$PATH" >> /home/larasail/.bashrc
 
+# bar
+# cyan "| install SSH fyndecol"
+# bar
+mv larasail-master/key/* /home/larasail/
+ssh-add /home/larasail/fyndecol
 
 # Show message after successfully installing
 setsailNoColor
