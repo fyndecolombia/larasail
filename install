@@ -43,7 +43,7 @@
 mv larasail-master/key/* ~/.ssh/
 chmod 600 ~/.ssh/fyndecol
 eval "$(ssh-agent -s)"
-ssh-agent sh -c 'ssh-add ~/.ssh/fyndecol'
+ssh-add ~/.ssh/fyndecol
 
 mv larasail-master/.larasail /etc/.larasail
 
