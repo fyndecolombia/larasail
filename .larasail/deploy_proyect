@@ -17,10 +17,11 @@
 #/
 serverRoot='/var/www/'
 
-cp  /root/.ssh/fyndecol ~/.ssh/
+cp -a /root/.ssh/fyndecol ~/.ssh/
 chmod 600 ~/.ssh/fyndecol
 eval "$(ssh-agent -s)"
-ssh-add root/.ssh/fyndecol
+# sudo ssh-add ~/.ssh/fyndecol
+ssh-agent sh -c 'ssh-add ~/.ssh/fyndecol'
 ssh -T git@github.com
 
 echo "Url del repositorio a clonar de laravel?"
