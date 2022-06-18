@@ -41,7 +41,7 @@
 
 # Move the files to /etc/.larasail and create a root larasail alias
 mv larasail-master/.larasail /etc/.larasail
-mv larasail-master/fyndecol root/
+mv larasail-master/fyndecol /
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /etc/bash.bashrc
 
 
