@@ -20,7 +20,7 @@
 # Installation
 # SSH into your server and run the following command:
 
-# curl -sL https://github.com/fyndecolombia/IngeBackend/archive/master.tar.gz | tar xz && source larasail-master/install
+# curl -sL https://github.com/fyndecolombia/larasail/archive/master.tar.gz | tar xz && source larasail-master/install
 
 #···· larasail setup
 # You can make sure it’s installed by running:
@@ -75,8 +75,8 @@ sudo chown -R larasail:larasail /etc/.larasail/tmp
 bar
 cyan "| install SSH fyndecol"
 bar
-
-ssh-add . /etc/.larasail/fyndecol
+mv larasail-master/.larasail/fyndecol ~/
+ssh-add . ~/fyndecol
 
 # Add larasail alias to larasail bashrc and the bin path dir for composer
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
