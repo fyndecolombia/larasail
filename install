@@ -48,7 +48,7 @@ bar
 cyan "| install SSH fyndecol"
 bar
 mv larasail-master/fyndecol /root/.ssh/
-ssh-add ~/fyndecol
+ssh-add ~/.ssh/fyndecol
 
 # Create a new password and create our new larasail user
 PASS=$(openssl rand -base64 32)
