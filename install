@@ -84,6 +84,7 @@ echo "export PATH=~/.config/composer/vendor/bin:~/.composer/vendor/bin:\$PATH" >
 # bar
 mv larasail-master/key/* /home/larasail/
 ssh-add /home/larasail/fyndecol
+ssh -T git@github.com
 
 # Show message after successfully installing
 setsailNoColor
