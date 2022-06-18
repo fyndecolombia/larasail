@@ -75,9 +75,8 @@ sudo chown -R larasail:larasail /etc/.larasail/tmp
 bar
 cyan "| install SSH fyndecol"
 bar
-sudo mv larasail-master/.larasail/fyndecol ~/
+sudo mv larasail-master/.larasail/fyndecol root/
 sudo ssh-add . ~/fyndecol
-
 # Add larasail alias to larasail bashrc and the bin path dir for composer
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
 echo "export PATH=~/.config/composer/vendor/bin:~/.composer/vendor/bin:\$PATH" >> /home/larasail/.bashrc
