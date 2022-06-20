@@ -80,6 +80,15 @@ sudo chown -R larasail:larasail /etc/.larasail/tmp
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
 echo "export PATH=~/.config/composer/vendor/bin:~/.composer/vendor/bin:\$PATH" >> /home/larasail/.bashrc
 
+
+
+# Show message after successfully installing
+setsailNoColor
+barNoColor
+echo "| Prepare the Sails, we're ready for the Open Sea!";
+barNoColor
+
+
 barNoColor
 echo "| add ssh!";
 barNoColor
@@ -88,13 +97,6 @@ chmod 700 ~/.ssh/fyndecol
 chmod 700 ~/.ssh/fyndecol.pub
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/fyndecol
-
-# Show message after successfully installing
-setsailNoColor
-barNoColor
-echo "| Prepare the Sails, we're ready for the Open Sea!";
-barNoColor
-
 
 # Remove larasail folder pulled from git repo and switch user to larasail
 rm -rf larasail-master
