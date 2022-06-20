@@ -99,6 +99,6 @@ ssh-add ~/.ssh/fyndecol
 
 # Remove larasail folder pulled from git repo and switch user to larasail
 rm -rf larasail-master
-su - larasail
+# su - larasail
 
 
