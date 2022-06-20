@@ -104,6 +104,8 @@ rm -rf larasail-master
 su - larasail
 mv home/larasail/key ~/
 sudo chmod 700 ~/key/fyndecol
+sudo chown larasail:larasail ~/key/fyndecol
 sudo chmod 700 ~/key/fyndecol.pub
+sudo chown larasail:larasail ~/key/fyndecol.pub
 
 
