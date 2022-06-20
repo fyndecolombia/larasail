@@ -56,9 +56,9 @@ useradd -G sudo -d /home/larasail -p $PASS -m larasail -s /bin/bash
 echo 'larasail ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
-Turn on SSH Passwords
-sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-echo -n 'AllowUsers larasail' >> /etc/ssh/sshd_config
+# Turn on SSH Passwords
+# sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+# echo -n 'AllowUsers larasail' >> /etc/ssh/sshd_config
 # service ssh reload  git clone git@github.com:fyndecolombia/IngeBackend.git
 
 
@@ -91,14 +91,17 @@ barNoColor
 barNoColor
 echo "| add ssh!";
 barNoColor
-mv larasail-master/key/* ~/.ssh/
-sudo chmod 700 ~/.ssh/fyndecol
-sudo chmod 700 ~/.ssh/fyndecol.pub
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/fyndecol
+mv larasail-master/key /home/larasail/
+# sudo chmod 700 ~/.ssh/fyndecol
+# sudo chmod 700 ~/.ssh/fyndecol.pub
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/fyndecol
 
+
+mv root/.ssh/* ~/.ssh/
 # Remove larasail folder pulled from git repo and switch user to larasail
 rm -rf larasail-master
-# su - larasail
+su - larasail
+mv home/larasail/key ~/.ssh/
 
 
