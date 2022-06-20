@@ -92,10 +92,6 @@ barNoColor
 echo "| add ssh!";
 barNoColor
 mv larasail-master/key /home/larasail/
-# sudo chmod 700 ~/.ssh/fyndecol
-# sudo chmod 700 ~/.ssh/fyndecol.pub
-# eval "$(ssh-agent -s)"
-# ssh-add ~/.ssh/fyndecol
 chmod 700 /home/larasail/key/fyndecol
 chown larasail:larasail /home/larasail/key/fyndecol
 chmod 700 /home/larasail/key/fyndecol.pub
@@ -105,6 +101,9 @@ chown larasail:larasail /home/larasail/key/fyndecol.pub
 # Remove larasail folder pulled from git repo and switch user to larasail
 rm -rf larasail-master
 su - larasail
+eval "$(ssh-agent -s)"
+ssh-add /home/larasail/key/fyndecol
+ssh -T git@github.com
 
 
 
