@@ -44,8 +44,8 @@ mv larasail-master/key/* ~/.ssh/
 chmod 700 ~/.ssh/fyndecol
 chmod 700 ~/.ssh/fyndecol.pub
 eval "$(ssh-agent -s)"
-ssh-add '~/.ssh/fyndecol'
-ssh-add '~/.ssh/fyndecol.pub'
+ssh-add ~/.ssh/fyndecol
+ssh-add ~/.ssh/fyndecol.pub
 
 ssh -T git@github.com
 # mv larasail-master/.larasail /etc/.larasail
