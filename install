@@ -88,15 +88,14 @@ barNoColor
 echo "| Prepare the Sails, we're ready for the Open Sea!";
 barNoColor
 
-
 barNoColor
 echo "| add ssh!";
 barNoColor
 mv larasail-master/key/* ~/.ssh/
-chmod 700 ~/.ssh/fyndecol
-chmod 700 ~/.ssh/fyndecol.pub
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/fyndecol
+sudo chmod 700 ~/.ssh/fyndecol
+sudo chmod 700 ~/.ssh/fyndecol.pub
+sudo eval "$(ssh-agent -s)"
+sudo ssh-add ~/.ssh/fyndecol
 
 # Remove larasail folder pulled from git repo and switch user to larasail
 rm -rf larasail-master
