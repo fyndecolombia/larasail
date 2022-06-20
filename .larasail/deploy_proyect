@@ -17,12 +17,6 @@
 #/
 serverRoot='/var/www/'
 
-# sudo cp /root/.ssh/fyndecol ~/.ssh/
-# sudo chmod 600 ~/.ssh/fyndecol
-# eval "$(ssh-agent -s)"
-# ssh-add /root/.ssh/fyndecol
-# sudo ssh-agent sh -c 'ssh-add ~/.ssh/fyndecol'
-
 
 echo "Url del repositorio a clonar de laravel?"
 read ROUTE_URL

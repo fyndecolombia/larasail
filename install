@@ -101,9 +101,7 @@ chown larasail:larasail /home/larasail/key/fyndecol.pub
 # Remove larasail folder pulled from git repo and switch user to larasail
 rm -rf larasail-master
 su - larasail
-eval "$(ssh-agent -s)"
-ssh-add /home/larasail/key/fyndecol
-ssh -T git@github.com
+
 
 
 

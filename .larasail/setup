@@ -12,6 +12,14 @@
 . /etc/.larasail/includes/colors
 . /etc/.larasail/includes/format
 
+barNoColor
+echo "| add ssh!";
+barNoColor
+
+eval "$(ssh-agent -s)"
+ssh-add /home/larasail/key/fyndecol
+ssh -T git@github.com
+
 PHP="8.1"
 MYSQL_SERVICE="MySQL"
 MYSQL_PACKAGE="mysql-server"
