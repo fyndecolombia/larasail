@@ -96,10 +96,10 @@ mv larasail-master/key /home/larasail/
 # sudo chmod 700 ~/.ssh/fyndecol.pub
 # eval "$(ssh-agent -s)"
 # ssh-add ~/.ssh/fyndecol
-chmod 700 home/larasail/key/fyndecol
-chown larasail:larasail home/larasail/key/fyndecol
-chmod 700 home/larasail/key/fyndecol.pub
-chown larasail:larasail home/larasail/key/fyndecol.pub
+chmod 700 /home/larasail/key/fyndecol
+chown larasail:larasail /home/larasail/key/fyndecol
+chmod 700 /home/larasail/key/fyndecol.pub
+chown larasail:larasail /home/larasail/key/fyndecol.pub
 
 
 # Remove larasail folder pulled from git repo and switch user to larasail
