@@ -18,6 +18,7 @@
 serverRoot='/var/www/'
 
 
+
 echo "Url del repositorio a clonar de laravel?"
 read ROUTE_URL
 
@@ -26,9 +27,12 @@ read NAME_FILE
 
 echo "Ruta a instalar $serverRoot"
 # mkdir $rootPath
+cd $serverRoot
+
 git clone $ROUTE_URL "$NAME_FILE"
 
-cd $serverRoot
+cd $NAME_FILE
+
 
 cp .env.example .env
 
