@@ -16,7 +16,7 @@
 #   larasail deploy_proyect
 #/
 serverRoot='/var/www/'
-yes
+
 # sudo cp /root/.ssh/fyndecol ~/.ssh/
 # sudo chmod 600 ~/.ssh/fyndecol
 # eval "$(ssh-agent -s)"
