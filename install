@@ -40,12 +40,6 @@
 # larasail host mywebsite.com /var/www/mywebsite
 
 # Move the files to /etc/.larasail and create a root larasail alias
-mv larasail-master/key/* ~/.ssh/
-chmod 700 ~/.ssh/fyndecol
-chmod 700 ~/.ssh/fyndecol.pub
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/fyndecol
-
 
 
 mv larasail-master/.larasail /etc/.larasail
@@ -86,7 +80,14 @@ sudo chown -R larasail:larasail /etc/.larasail/tmp
 echo "alias larasail='sh /etc/.larasail/larasail'" >> /home/larasail/.bashrc
 echo "export PATH=~/.config/composer/vendor/bin:~/.composer/vendor/bin:\$PATH" >> /home/larasail/.bashrc
 
-
+barNoColor
+echo "| add ssh!";
+barNoColor
+mv larasail-master/key/* ~/.ssh/
+chmod 700 ~/.ssh/fyndecol
+chmod 700 ~/.ssh/fyndecol.pub
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/fyndecol
 
 # Show message after successfully installing
 setsailNoColor
